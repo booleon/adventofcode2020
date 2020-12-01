@@ -19,9 +19,10 @@ def get_3_number_summing_2020(entries: list):
     potential_result = ()
     while len(local_entries) > 2 and not potential_result:
         first_number = local_entries.pop(0)
-        second_number = local_entries.pop(0)
-        potential_result = _get_missing_number_to_2020((first_number, second_number), entries)
-        local_entries.append(second_number)
+        local_insider = local_entries[:]
+        while local_insider and not potential_result:
+            second_number = local_insider.pop(0)
+            potential_result = _get_missing_number_to_2020((first_number, second_number), local_insider)
     return potential_result
 
 
