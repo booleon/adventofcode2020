@@ -1,3 +1,4 @@
+import logging
 from typing import List
 
 
@@ -34,3 +35,12 @@ def _get_missing_number_to_2020(fist_items: tuple, entries: List[int]) -> tuple:
     if potential_result:
         return potential_result[0]
     return ()
+
+
+def main(lines: list):
+    logging.info(f"d1e1")
+    numbers = get_number_summing_2020(lines)
+    print(numbers[0] * numbers[1])
+    logging.info(f"d1e1")
+    numbers3 = get_3_number_summing_2020(lines)
+    print(numbers3[0] * numbers3[1] * numbers3[2])
