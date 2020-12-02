@@ -2,7 +2,7 @@ import logging
 from pathlib import Path
 
 from adventofcode import expense
-from adventofcode.password import count_valid_passwords
+from adventofcode.password import count_sled_valid_passwords, count_tobogan_valid_passwords
 
 logging.basicConfig(level=logging.INFO)
 
@@ -23,5 +23,8 @@ expense.main(lines)
 
 file_path = Path('.') / "advent_data_passwords"
 lines = read_file(file_path)
-logging.info(f"d1e1")
-print(count_valid_passwords(lines))
+logging.info(f"d2e1")
+print(count_sled_valid_passwords(lines))
+logging.info(f"d2e2")
+print(count_tobogan_valid_passwords(lines))
+
