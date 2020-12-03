@@ -19,10 +19,4 @@ print(count_sled_valid_passwords(lines))
 logging.info(f"d2e2")
 print(count_tobogan_valid_passwords(lines))
 
-file_path = Path('.') / "advent_data_tobogan"
-lines = read_file(file_path)
-logging.info(f"d3e1")
-road_to_airport_map = Map.parse(lines)
-print(Tobogan.get_encounter_trees_on(road_to_airport_map))
-
 tobogan_trajectory.main()
